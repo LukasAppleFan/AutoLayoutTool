@@ -14,20 +14,27 @@ import UIKit
 @available(iOS 9.0, *)
 public extension UIView {
     
-    // Fill the superview
+    /// Fill a view to superview
     func fillSuperview() {
         anchor(top: superview?.topAnchor, leading: superview?.leadingAnchor, bottom: superview?.bottomAnchor, trailing: superview?.trailingAnchor)
     }
     
-    // Set the width and height size
+    /// Set the size to a view
+    /// - Parameter view: Select which view you want to set the size to.
     func anchorSize(to view: UIView) {
         widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
     }
     
-    // Choose a top, leading, bottom and trailing anchor
-    // Set a padding
-    // Set the size
+    
+    /// A better way of laying views out.
+    /// - Parameters:
+    ///   - top: Set the top anchor (optional).
+    ///   - leading: Set the leading anchor (optional).
+    ///   - bottom: Set the bottom anchor (optional).
+    ///   - trailing: Set the trailing anchor (optional).
+    ///   - padding: Set a padding value (default: 0).
+    ///   - size: Set the size (default: 0).
     func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         
