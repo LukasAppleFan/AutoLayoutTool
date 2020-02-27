@@ -52,7 +52,7 @@ blueView.anchorSize(to: redView)
 
 ## Version
 
-The current version is 1.0.1, it just brought a new documentation.
+The current version is 1.0.3, it just brought a new documentation.
 
 ## Contribution
 
